@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "transmission",
+      "image": "jamesnetherton/transmission",
+      "args": "-e DISPLAY=$DISPLAY -v /etc/localtime:/etc/localtime:ro -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}/Downloads:/downloads -v ${HOME}/.local:/home/transmission/.local -v ${HOME}/.config:/home/transmission/.config -v ${HOME}/.cache:/home/transmission/.cache",
+      "pull": "true"
+    },
+    {
+      "name": "polarfinder",
+      "image": "jamesnetherton/polarfinder",
+      "args": "-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/localtime:/etc/localtime:ro"
+    }
+  ]
+}

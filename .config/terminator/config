@@ -1,0 +1,26 @@
+[global_config]
+  enabled_plugins = TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
+[keybindings]
+[profiles]
+  [[default]]
+    use_system_font = False
+    visible_bell = True
+    background_darkness = 0.94
+    urgent_bell = True
+    background_type = transparent
+    background_image = None
+    foreground_color = "#839496"
+    show_titlebar = False
+    font = DejaVu Sans Mono for Powerline 10
+    background_color = "#002b36"
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
