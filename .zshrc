@@ -49,7 +49,7 @@ plugins=(git mvn ssh-agent gpg-agent)
 
 # User configuration
 
-export JAVA_HOME=/usr/lib/jvm/default-java
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 export MAVEN_HOME=/usr/share/apache-maven-3.5.0/bin
 export GOROOT=/usr/share/go
 export GOPATH=/home/james/workspace/golang
