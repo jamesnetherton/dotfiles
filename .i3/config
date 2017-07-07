@@ -33,7 +33,7 @@ bindsym $mod+Shift+h exec sudo /usr/sbin/pm-hibernate
 bindsym $mod+t exec thunar
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
