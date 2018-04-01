@@ -25,7 +25,7 @@ font pango:DejaVu Sans Mono 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-####################################################################################
+##############################################
 bindsym $mod+Shift+p exec sudo /sbin/poweroff
 bindsym $mod+Shift+z exec sudo /sbin/reboot
 bindsym $mod+Shift+s exec sudo /usr/sbin/pm-suspend
@@ -40,8 +40,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --bg-fill --randomize /home/james/Pictures/*.JPG
-####################################################################################
+exec --no-startup-id feh --bg-fill --randomize /home/james/Pictures/*.jpg
+###################################################################
 
 # start a terminal
 bindsym $mod+Return exec terminator

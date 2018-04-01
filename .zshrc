@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+export TERM="xterm-256color"
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -48,12 +50,13 @@ ENABLE_CORRECTION="true"
 plugins=(git mvn ssh-agent gpg-agent)
 
 # User configuration
-
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-export MAVEN_HOME=/usr/share/apache-maven-3.5.0/bin
+export MAVEN_HOME=/usr/share/apache-maven-3.5.3/bin
 export GOROOT=/usr/share/go
-export GOPATH=/home/james/workspace/golang
-export PATH=${JAVA_HOME}/bin:${MAVEN_HOME}:${GOROOT}/bin:${PATH}
+export GOPATH=${HOME}/workspace/golang
+export NPM_HOME=${HOME}/DATA/Applications/node
+export NPMLOCAL=${HOME}/DATA/.npm-global
+export PATH=${JAVA_HOME}/bin:${MAVEN_HOME}:${GOROOT}/bin:${NPM_HOME}/bin:${NPMLOCAL}/bin:${PATH}
 
 source $ZSH/oh-my-zsh.sh
 
@@ -146,6 +149,10 @@ function createOrStartContainer() {
         DOCKER_ARGS="${ARGS}"
       fi
 
+      if [[ ${ARGS} == *"X11"* ]]; then
+        xhost +
+      fi
+
       eval "sudo docker run --name ${APP} ${DOCKER_ARGS} ${EXTRA_ARGS} ${IMAGE} ${CMD} ${APP_ARGS}"
     fi
   else
@@ -154,5 +161,3 @@ function createOrStartContainer() {
 }
 
 createAppAliases
-
-

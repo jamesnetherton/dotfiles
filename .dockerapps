@@ -3,13 +3,31 @@
     {
       "name": "transmission",
       "image": "jamesnetherton/transmission",
-      "args": "-e DISPLAY=$DISPLAY -v /etc/localtime:/etc/localtime:ro -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}/Downloads:/downloads -v ${HOME}/.local:/home/transmission/.local -v ${HOME}/.config:/home/transmission/.config -v ${HOME}/.cache:/home/transmission/.cache",
+      "args": "-p 9091:9091 -e DISPLAY=$DISPLAY -v /etc/localtime:/etc/localtime:ro -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}/Downloads:/downloads -v ${HOME}/.local:/home/transmission/.local -v ${HOME}/.config:/home/transmission/.config -v ${HOME}/.cache:/home/transmission/.cache",
       "pull": "true"
     },
     {
       "name": "polarfinder",
       "image": "jamesnetherton/polarfinder",
       "args": "-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/localtime:/etc/localtime:ro"
+    },
+    {
+      "name": "libreoffice",
+      "image": "jess/libreoffice",
+      "args": "-ti -v /etc/localtime:/etc/localtime:ro -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}/Documents:/root/documents -e DISPLAY=$DISPLAY -e GDK_SCALE -e GDK_DPI_SCALE",
+      "daemonize": "false"
+    },
+    {
+      "name": "fuse-emulator",
+      "image": "jamesnetherton/fuse-emulator",
+      "args": "--device /dev/snd --device /dev/dri/card0 -e DISPLAY=$DISPLAY -v /etc/localtime:/etc/localtime:ro -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}/DATA/Games/Spectrum:/games  --privileged",
+      "command": ""
+    },
+    {
+      "name": "mixxx",
+      "image": "jamesnetherton/mixxx",
+      "args": "--device /dev/snd --device /dev/dri/card0 -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}/Music/:/music --privileged",
+      "command": ""
     }
   ]
 }
