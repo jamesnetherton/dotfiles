@@ -11,7 +11,7 @@
     # <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
     # If markup is not allowed, those tags will be stripped out of the
     # message.
-    allow_markup = yes
+    markup = yes
     
     # The format of the message.  Possible variables are:
     #   %a  appname
@@ -50,7 +50,8 @@
     
     # Ignore newlines '\n' in notifications.
     ignore_newline = no
-    
+
+    max_icon_size = 64
     
     # The geometry of the window:
     #   [{width}]x{height}[+/-{x}+/-{y}]
@@ -145,11 +146,10 @@
     icon_position = left
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/
+    icon_path = /usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/:/usr/share/icons/hicolor/32x32/apps
 
-[frame]
-    width = 0
-    color = "#98FF98"
+     frame_width = 0
+     frame_color = "#98FF98"
 
 [shortcuts]
 
