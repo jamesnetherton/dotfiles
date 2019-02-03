@@ -146,7 +146,7 @@
     icon_position = left
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/:/usr/share/icons/hicolor/32x32/apps
+    icon_path = /usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/:/usr/share/icons/hicolor/32x32/apps:/usr/share/icons/gnome/24x24/actions
 
      frame_width = 0
      frame_color = "#98FF98"
