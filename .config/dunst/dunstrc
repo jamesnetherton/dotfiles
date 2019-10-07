@@ -148,8 +148,8 @@
     # Paths to default icons.
     icon_path = /usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/:/usr/share/icons/hicolor/32x32/apps:/usr/share/icons/gnome/24x24/actions
 
-     frame_width = 0
-     frame_color = "#98FF98"
+    frame_width = 0
+    frame_color = "#98FF98"
 
 [shortcuts]
 
@@ -208,6 +208,21 @@
 # to "".
 # NOTE: It might be helpful to run dunst -print in a terminal in order
 # to find fitting options for rules.
+
+[email]
+    body = "*protonmail*"
+    background = "#9398cf"
+    foreground = "#ffffff"
+
+[gmail]
+    body = "*mail.google.com*"
+    background = "#ffffff"
+    foreground = "#000000"
+
+[play]
+    body = "*play.google.com*"
+    background = "#ffffff"
+    foreground = "#000000"
 
 #[espeak]
 #    summary = "*"
