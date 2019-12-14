@@ -41,6 +41,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-fill --randomize /home/james/Pictures/*.jpg
+
+new_window 1pixel
 ###################################################################
 
 # start a terminal
