@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+rm -rf /home/james/.local/share/Trash/files/* /home/james/.local/share/Trash/info/*
