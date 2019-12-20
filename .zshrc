@@ -50,13 +50,6 @@ ENABLE_CORRECTION="true"
 plugins=(git mvn ssh-agent gpg-agent)
 
 # User configuration
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-export MAVEN_HOME=/usr/share/apache-maven-3.5.3/bin
-export GOROOT=/usr/share/go
-export GOPATH=${HOME}/workspace/golang
-export NPM_HOME=${HOME}/DATA/Applications/node
-export NPMLOCAL=${HOME}/DATA/.npm-global
-export PATH=${JAVA_HOME}/bin:${MAVEN_HOME}:${GOROOT}/bin:${NPM_HOME}/bin:${NPMLOCAL}/bin:${PATH}
 
 source $ZSH/oh-my-zsh.sh
 
